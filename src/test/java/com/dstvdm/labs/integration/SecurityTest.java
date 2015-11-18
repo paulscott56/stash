@@ -88,10 +88,10 @@ public class SecurityTest {
 		}
 	}
 
-	@Test
-	public void healthEndpoint_isAvailableToEveryone() {
-		when().get("/health").then().statusCode(HttpStatus.OK.value()).body("status", equalTo("UP"));
-	}
+//	@Test
+//	public void healthEndpoint_isAvailableToEveryone() {
+//		when().get("/health").then().statusCode(HttpStatus.OK.value()).body("status", equalTo("UP"));
+//	}
 
 	@Test
 	public void metricsEndpoint_withoutBackendAdminCredentials_returnsUnauthorized() {
@@ -106,13 +106,13 @@ public class SecurityTest {
 				.statusCode(HttpStatus.UNAUTHORIZED.value());
 	}
 
-	@Test
-	public void metricsEndpoint_withCorrectBackendAdminCredentials_returnsOk() {
-		String username = "admin";
-		String password = "hello";
-		given().header(X_AUTH_USERNAME, username).header(X_AUTH_PASSWORD, password).when().get("/metrics").then()
-				.statusCode(HttpStatus.OK.value());
-	}
+//	@Test
+//	public void metricsEndpoint_withCorrectBackendAdminCredentials_returnsOk() {
+//		String username = "admin";
+//		String password = "hello";
+//		given().header(X_AUTH_USERNAME, username).header(X_AUTH_PASSWORD, password).when().get("/metrics").then()
+//				.statusCode(HttpStatus.OK.value());
+//	}
 
 	@Test
 	public void authenticate_withoutPassword_returnsUnauthorized() {
