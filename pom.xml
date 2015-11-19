@@ -177,7 +177,7 @@
                     <generatePackage>com.dstvdm.labs.connect</generatePackage>
                     <schemas>
                         <schema>
-                            <url>http://rnd-qa05/Connect/WCF/ConnectWCFService.svc?apikey=ec23d69d-015d-40df-a8e8-53b1a965bdc2</url>
+                            <url>http://rnd-qa05/Connect/WCF/ConnectWCFService.svc</url>
                         </schema>
                     </schemas>
                 </configuration>
