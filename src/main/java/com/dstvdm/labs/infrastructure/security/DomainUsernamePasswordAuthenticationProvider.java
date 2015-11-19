@@ -29,11 +29,18 @@ public class DomainUsernamePasswordAuthenticationProvider implements Authenticat
 
 		AuthenticationWithToken resultOfAuthentication = externalServiceAuthenticator.authenticate(username.get(),
 				password.get());
+		try {
+			resultOfAuthentication.isAuthenticated(); 
+		} catch (NullPointerException e) {
+			throw new BadCredentialsException("Invalid Domain User Credentials");
+		}
+		
 		String newToken = tokenService.generateNewToken();
 		resultOfAuthentication.setToken(newToken);
 		tokenService.store(newToken, resultOfAuthentication);
 
 		return resultOfAuthentication;
+		
 	}
 
 	@Override
