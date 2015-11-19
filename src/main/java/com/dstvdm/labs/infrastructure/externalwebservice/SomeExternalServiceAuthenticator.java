@@ -9,13 +9,12 @@ import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import com.dstvdm.labs.domain.DomainUser;
+import com.dstvdm.labs.entities.Account;
+import com.dstvdm.labs.entities.Role;
+import com.dstvdm.labs.entities.User;
+import com.dstvdm.labs.entities.UserCreateForm;
 import com.dstvdm.labs.infrastructure.AuthenticatedExternalWebService;
 import com.dstvdm.labs.infrastructure.security.ExternalServiceAuthenticator;
-
-import entities.Account;
-import entities.Role;
-import entities.User;
-import entities.UserCreateForm;
 
 public class SomeExternalServiceAuthenticator implements ExternalServiceAuthenticator {
 

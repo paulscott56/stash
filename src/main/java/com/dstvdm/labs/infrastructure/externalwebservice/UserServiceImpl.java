@@ -9,10 +9,9 @@ import org.springframework.data.domain.Sort;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import com.dstvdm.labs.entities.User;
+import com.dstvdm.labs.entities.UserCreateForm;
 import com.dstvdm.labs.repo.UserRepository;
-
-import entities.User;
-import entities.UserCreateForm;
 
 @Service
 public class UserServiceImpl implements UserService {

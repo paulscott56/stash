@@ -1,4 +1,4 @@
-package entities;
+package com.dstvdm.labs.entities;
 
 
 import org.springframework.data.annotation.Id;

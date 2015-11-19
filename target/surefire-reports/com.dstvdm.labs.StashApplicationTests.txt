@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.dstvdm.labs.StashApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.448 sec - in com.dstvdm.labs.StashApplicationTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.572 sec - in com.dstvdm.labs.StashApplicationTests

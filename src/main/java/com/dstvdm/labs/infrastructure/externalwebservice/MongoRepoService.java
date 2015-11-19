@@ -4,8 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.BadCredentialsException;
 
 import com.dstvdm.labs.AccountRepository;
-
-import entities.Account;
+import com.dstvdm.labs.entities.Account;
 
 public class MongoRepoService {
 	
