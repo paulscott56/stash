@@ -39,14 +39,12 @@ public class SomeExternalServiceAuthenticator implements ExternalServiceAuthenti
 		    User userOpt = user.get();
 		    
 		    if (BCrypt.checkpw(password, userOpt.getPasswordHash())) {
-		    	System.out.println("It matches");
 		    	AuthenticatedExternalWebService authenticatedExternalWebService = new AuthenticatedExternalWebService(
 						new DomainUser(username), null, AuthorityUtils.commaSeparatedStringToAuthorityList("ROLE_DOMAIN_USER"));
 				authenticatedExternalWebService.setExternalWebService(externalWebService);
 				return authenticatedExternalWebService;
 		    }
 		    else {
-		    	System.out.println("It does not match");
 		    	return null;
 		    }
 		}catch (Exception e) {
